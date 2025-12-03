@@ -1,0 +1,193 @@
+/* Color Variables */
+:root {
+    --color-page-bg: #EFEFEF;
+    --color-card-bg: #111A29;
+    --color-navbar-bg: #0D1520;
+    --color-text-light: #FFFFFF;
+    --color-input-bg: #0D1520;
+    --color-placeholder-text: #888888;
+    --color-primary-button: #1A497A;
+}
+
+/* Base Styles */
+
+body {
+    background-color: var(--color-page-bg);
+}
+
+/* --- Header / Navbar Styling --- */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif, 'poppins';
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #04192F;
+            color: white;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .login-register {
+            display: flex;
+            gap: 20px;
+        }
+
+        .login-register a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav {
+            height: 70px;
+            padding: 30px;
+            background-color: #103D6E;
+        }
+
+        .nav-bar ul {
+            display: flex;
+            justify-content: start;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav-bar ul li a:hover, .login-register a:hover {
+            color: #8C2424;
+        }
+
+        /* Dropdown Styles */
+        .nav-bar ul li {
+            position: relative;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #04192F;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1000;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .dropdown a:hover {
+            background-color: #103D6E;
+            color: #8C2424;
+        }
+
+        .dropdown.show {
+            display: block;
+        }
+
+/* --- Main Login Layout --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adjust min-height to push the card down slightly from the top, matching the image */
+    min-height: calc(100vh - 80px); 
+    padding-top: 50px; 
+}
+
+/* --- Login Card Styling --- */
+.login-card {
+    background-color: var(--color-card-bg);
+    width: 400px; /* Fixed width for the card */
+    padding: 40px 35px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: var(--color-text-light);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+/* --- Form Styling --- */
+.login-form label {
+    display: block;
+    color: var(--color-text-light);
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-input-bg); /* Border matches input color for clean look */
+    border-radius: 4px;
+    background-color: var(--color-input-bg);
+    color: var(--color-text-light);
+    font-size: 1em;
+}
+
+.login-form input::placeholder {
+    color: var(--color-placeholder-text);
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-primary-button);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.login-button:hover {
+    background-color: #153c63; /* Slightly darker hover */
+}
+
+/* --- Footer Links Styling --- */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.card-footer .footer-link {
+    color: var(--color-text-light);
+    font-size: 0.8em;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.card-footer .footer-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}

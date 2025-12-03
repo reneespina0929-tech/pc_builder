@@ -1,0 +1,363 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif, 'poppins';
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #04192F;
+            color: white;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .login-register {
+            display: flex;
+            gap: 20px;
+        }
+
+        .login-register a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav {
+            height: 70px;
+            padding: 30px;
+            background-color: #103D6E;
+        }
+
+        .nav-bar ul {
+            display: flex;
+            justify-content: start;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav-bar ul li a:hover, .login-register a:hover {
+            color: #8C2424;
+        }
+
+        /* Dropdown Styles */
+        .nav-bar ul li {
+            position: relative;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #04192F;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1000;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .dropdown a:hover {
+            background-color: #103D6E;
+            color: #8C2424;
+        }
+
+        .dropdown.show {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 80px;
+            gap: 40px;
+            background-color: white;
+        }
+
+        .hero-content {
+            flex: 1;
+            background-color: #B8D4E8;
+            padding: 60px 40px;
+            border-radius: 8px;
+        }
+
+        .hero-content h2 {
+            font-size: 38px;
+            color: #04192F;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero-content p {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .hero-content button {
+            background-color: #04192F;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .hero-content button:hover {
+            background-color: #103D6E;
+        }
+
+        .hero-image {
+            flex: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Find Perfect Motherboard Section */
+        .find-motherboard {
+            padding: 80px 80px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .find-motherboard h2 {
+            font-size: 36px;
+            color: #04192F;
+            margin-bottom: 60px;
+        }
+
+        .motherboard-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-content {
+            padding: 30px 25px;
+            text-align: left;
+        }
+
+        .category-content h3 {
+            font-size: 20px;
+            color: #04192F;
+            margin-bottom: 15px;
+        }
+
+        .category-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Motherboard Products Section */
+        .motherboard-products {
+            padding: 80px 80px;
+            background-color: #f5f5f5;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-badges {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .badge {
+            background-color: #04192F;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+        }
+
+        .badge.ddr5 {
+            background-color: #28a745;
+        }
+
+        .badge.wifi {
+            background-color: #007bff;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            padding: 20px;
+        }
+
+        .product-content {
+            padding: 25px;
+        }
+
+        .brand-name {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .product-content h3 {
+            font-size: 18px;
+            color: #04192F;
+            margin-bottom: 15px;
+        }
+
+        .product-specs {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #04192F;
+            font-weight: bold;
+        }
+
+        .view-btn {
+            background-color: #04192F;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .view-btn:hover {
+            background-color: #103D6E;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-color: #04192F;
+            color: white;
+            padding: 40px;
+            gap: 40px;
+        }
+
+        .upper-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .upper-links h1 {
+            font-size: 48px;
+        }
+
+        footer ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .upper-links ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .bottom-links {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .bottom-links ul li a {
+            color: white;
+        }
+
+        footer hr {
+            border: none;
+            border-top: 1px solid #fff;
+        }
